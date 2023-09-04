@@ -11,18 +11,8 @@ import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
-@EnableMongoRepositories(
-//        basePackages = {"wms.config"
-//}
-)
+@EnableMongoRepositories()
 public class MongoConfig extends AbstractMongoClientConfiguration {
-
-//    @Bean
-////    @Autowired
-////    @ConditionalOnExpression("'${mongo.transactions}'=='enabled'")
-//    MongoTransactionManager transactionManager(MongoDbFactory dbFactory) {
-//        return new MongoTransactionManager(dbFactory);
-//    }
 
     @Value("${spring.data.mongodb.database}")
     private String databaseName;

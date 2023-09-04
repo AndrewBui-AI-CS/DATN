@@ -1,7 +1,7 @@
 package wms.common.response;
 
 import org.springframework.data.domain.Page;
-import wms.entity.ResultEntity;
+import wms.common.ResultEntity;
 
 import java.util.*;
 

@@ -3,7 +3,7 @@ import axiosSendRequest from "../axiosSendRequest";
 import { endPoint } from "../endpoint";
 import { queryKey } from "./querykey";
 
-export const useGetAllUsersExist = (params) => {
+export const useGetAllUsersExist = () => {
   return useQuery({
     queryKey: [queryKey.user.user_list_all],
     queryFn: async () => {

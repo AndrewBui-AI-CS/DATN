@@ -115,8 +115,8 @@ export const endPoint = {
   getTripRoutes: baseUrl + "/delivery-trip/get-trip-route",
   // User
   // createNewUser: base
-  getAllUsers: baseUrl + "/user/get-all",
-  getAllUsersWithoutPagination: baseUrl + "/user/get-all-exists",
+  getAllUsers: baseUrl + "/user/get-users-paging",
+  getAllUsersWithoutPagination: baseUrl + "/user/get-all",
   getAllUsersByRole: baseUrl + "/user/get-all-by-roles",
   // Dashboard
   getNewFacilityMonthly: baseUrl + "/dashboard/facility/new-facility",

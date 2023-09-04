@@ -1,7 +1,7 @@
 package wms.common.response;
 
 import org.springframework.web.client.HttpClientErrorException;
-import wms.entity.ResultEntity;
+import wms.common.ResultEntity;
 import wms.exception.CustomException;
 import wms.utils.LogUtils;
 

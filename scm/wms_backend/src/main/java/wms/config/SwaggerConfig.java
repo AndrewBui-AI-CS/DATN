@@ -18,6 +18,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 @Configuration
 @EnableSwagger2
@@ -38,11 +39,11 @@ public class SwaggerConfig implements WebMvcConfigurer {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("wms.controller"))
+                .apis(RequestHandlerSelectors.basePackage("wms.domain"))
                 .paths(PathSelectors.any())
                 .build()
-                .securitySchemes(Arrays.asList(apiKey()))
-                .securityContexts(Arrays.asList(securityContext()))
+                .securitySchemes(Collections.singletonList(apiKey()))
+                .securityContexts(Collections.singletonList(securityContext()))
                 .apiInfo(apiInfo());
     }
     private ApiKey apiKey() {
@@ -61,8 +62,8 @@ public class SwaggerConfig implements WebMvcConfigurer {
     }
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("My API Documentation")
-                .description("API documentation for my Spring Boot application")
+                .title("SSCM API Documentation")
+                .description("This is document for supply chain management system I used as my thesis project")
                 .version("1.0")
                 .build();
     }
