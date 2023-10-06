@@ -7,7 +7,13 @@ SQL_DB_HOST: 127.0.0.1
 SQL_DB_PORT: 5432
 SQL_DB_USER: postgres
 SQL_DB_PASS: rbking123
-POSTGRES_DB: postgres
+POSTGRES_DB: datn
+MYSQL_DB_HOST: 127.0.0.1
+MYSQL_DB_PORT: 3306
+MYSQL_DB_USER: root
+MYSQL_DB_PASS: rbking123
+MYSQL_DB: demo
+
 server:
   servlet:
     context-path: '/api'
@@ -93,3 +99,25 @@ file:
     path: templates/vuArial.ttf
   image:
     path: images/logo.jpg
+
+
+pool:
+  minPoolSize: 12
+  maxPoolSize: 128
+  initialPoolSize: 12
+  maxIdleTime: 30
+  acquireIncrement: 5
+  acquireRetryAttempts: 10
+  acquireRetryDelay: 100
+  breakAfterAcquireFailure: false
+  unreturnedConnectionTimeout: 0
+  checkoutTimeout: 300
+  numHelperThreads: 4
+  maxConnectionAge: 0
+  debugUnreturnedConnectionStackTraces: true
+  maxStatements: 0
+
+mysql:
+  url: jdbc:mysql://${MYSQL_DB_HOST}:${MYSQL_DB_PORT}/${MYSQL_DB}
+  username: ${MYSQL_DB_USER}
+  password: ${MYSQL_DB_PASS}

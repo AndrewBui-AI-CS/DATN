@@ -1,8 +1,7 @@
 package wms.domain.category.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 import wms.common.BaseEntity;
@@ -17,6 +16,9 @@ import java.util.Set;
 @Setter
 @Entity
 @Table(name = "scm_contract_type")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class ContractType extends BaseEntity implements Serializable {
     @Column(name = "code")
     private String code;
